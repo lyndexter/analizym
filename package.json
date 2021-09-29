@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@fortawesome/fontawesome-free": "^5.15.4",
@@ -23,8 +24,12 @@
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.5",
     "react-dom": "^17.0.2",
+    "react-flip-toolkit": "^7.0.13",
     "react-scripts": "4.0.3",
+    "react-spring": "^9.2.4",
     "recharts": "^2.1.4",
+    "rsuite": "^5.0.0",
+    "spring": "0.0.0",
     "styled-components": "^5.3.1",
     "web-vitals": "^1.1.2"
   },

@@ -13,14 +13,14 @@ import {
 } from "recharts";
 import BarChartComponent from "../../../components/BarChartComponent/BarChartComponent";
 import { TypographyStyled } from "../Home.styled";
-import { BarStyled } from "./Dashboard.styled";
+import { DashboardContainer } from "./Dashboard.styled";
 
 export default function Dashboard() {
   return (
-    <div>
+    <DashboardContainer>
       <TypographyStyled variant="h5">Dashboard</TypographyStyled>
       <BarChartComponent />
-    </div>
+    </DashboardContainer>
   );
 }
 
