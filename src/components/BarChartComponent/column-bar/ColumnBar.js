@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { SvgStyled } from "./ColumnBar.styled";
 import { useSpring, animated } from "react-spring";
+import BarChartContext from "../../../utils/BarChartContext";
 
 const getPath = (x, y, width, height, round) =>
   `M ${x},${y + height} v ${
@@ -10,10 +11,12 @@ const getPath = (x, y, width, height, round) =>
   } q ${round},0,${round},${round} v ${height - round} z`;
 
 export default function ColumnBarStyled(props) {
-  const { x, y, width, height, fill, outlineColor } = props;
+  const { x, y, width, height, fill, outlineColor, info } = props;
   const fillColor = fill;
 
+  const { elementInfo, setElementInfo } = useContext(BarChartContext);
   const [active, setActive] = useState(false);
+
   const { x_time } = useSpring({
     config: { duration: 300 },
     x_time: active ? 1 : 0,
@@ -30,7 +33,10 @@ export default function ColumnBarStyled(props) {
 
   return (
     <SvgStyled
-      onMouseMove={() => setActive(true)}
+      onMouseMove={() => {
+        setActive(true);
+        setElementInfo(info);
+      }}
       onMouseLeave={() => setActive(false)}
     >
       <animated.path

@@ -18,11 +18,3 @@ export const PickerContainer = styled.div`
 export const CardContentStyled = styled(CardContent)`
   display: flex;
 `;
-
-export const InfoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  justify-content: space-evenly;
-  align-items: center;
-`;
